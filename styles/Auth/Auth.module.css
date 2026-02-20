@@ -1,0 +1,29 @@
+.auth_container {
+  width: 100%;
+  min-height: 80vh;
+  background-image: url("https://www.wedfield.com/assets/front/images/couple-bg-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  /* place-items: center; */
+  background-position: center;
+}
+
+.form_container {
+  background-color: #fff;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 70%;
+}
+.loginBtn1 {
+  padding: 7px;
+  font-size: 17px;
+  background-color: #ffffff;
+  color: #b7265a;
+  border: 1px solid #b7265a;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  width: 33% !important;
+}

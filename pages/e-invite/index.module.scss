@@ -1,0 +1,94 @@
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+
+  > article {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 70px;
+    gap: 20px;
+    > h1 {
+      font-family: Poppins;
+      font-size: 21.66px;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: left;
+      color: #4a4a4a;
+      > span {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        color: #909090;
+      }
+    }
+    > div {
+      display: grid;
+      gap: 70px 30px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      > div {
+        width: 100%;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  width: calc(100% - 140px);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f6f8;
+  border-radius: 6px;
+  padding: 8px 20px;
+}
+.pagination span {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.14000000059604645px;
+  text-align: left;
+}
+.pagination article {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: -0.14000000059604645px;
+  text-align: left;
+}
+.pagination article > :nth-child(1) {
+  transform: rotate(180deg);
+}
+.pagination article hgroup {
+  background: #ffffff;
+  width: 44.69px;
+  height: 29.61px;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+}
+.pagination article img {
+  cursor: pointer;
+}
+.pagination article span {
+  margin-left: -6px;
+  cursor: pointer;
+}

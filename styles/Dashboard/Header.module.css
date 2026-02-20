@@ -1,0 +1,11 @@
+.header{
+    position: fixed;
+    top: env(safe-area-inset-top);
+    left: 0;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: #fff;
+    z-index: 200;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.08);
+
+}

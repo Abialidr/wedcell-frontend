@@ -1,0 +1,157 @@
+.builder-component {
+  max-width: none !important;
+}
+.div {
+  border-radius: 10px;
+  display: flex;
+  max-width: 550px;
+  flex-direction: column;
+}
+.tabpanel {
+  border-radius: 10px;
+  background-color: rgba(10, 10, 10, 1);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px 0 0px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+@media (max-width: 991px) {
+  .tabpanel {
+    max-width: 100%;
+  }
+}
+.div2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  .div2 {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+.div3 {
+  align-self: start;
+  display: flex;
+  gap: 3px;
+}
+.img {
+  aspect-ratio: 1.12;
+  object-fit: contain;
+  object-position: center;
+  width: 18px;
+}
+.iReallyAppreciateNewDelhiInstitutionOfEventManagementThisInstituteReallyHelpedMeALotAndIHaveLearnedALotOfThingsFromThisInstituteIWouldLikeToThankNdiemDelhiAndAllTheTeachersForGivingWonderfulPlacementOpportunityAfterGivingInternshipOptions {
+  color: rgba(159, 170, 183, 1);
+  margin-top: 16px;
+  font: 500 16px/26px Jost, sans-serif;
+  text-align: justify;
+}
+@media (max-width: 991px) {
+  .iReallyAppreciateNewDelhiInstitutionOfEventManagementThisInstituteReallyHelpedMeALotAndIHaveLearnedALotOfThingsFromThisInstituteIWouldLikeToThankNdiemDelhiAndAllTheTeachersForGivingWonderfulPlacementOpportunityAfterGivingInternshipOptions {
+    max-width: 100%;
+  }
+}
+.div4 {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 508px;
+}
+@media (max-width: 991px) {
+  .div4 {
+    max-width: 100%;
+  }
+}
+.div5 {
+  gap: 20px;
+  display: flex;
+}
+@media (max-width: 991px) {
+  .div5 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 85%;
+  margin-left: 0px;
+}
+@media (max-width: 991px) {
+  .column {
+    width: 100%;
+  }
+}
+.div6 {
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
+  color: rgba(255, 255, 255, 1);
+}
+@media (max-width: 991px) {
+  .div6 {
+    margin-top: 40px;
+  }
+}
+.img2 {
+  aspect-ratio: 0.99;
+  object-fit: contain;
+  object-position: center;
+  width: 70px !important;
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  .div4 {
+    display: none;
+  }
+  .div2 {
+    padding-bottom: 20px;
+  }
+}
+.div7 {
+  align-self: start;
+  display: flex;
+  margin-top: 11px;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: fit-content;
+}
+.heading3 {
+  align-self: start;
+  font: 600 24px/1 Jost, sans-serif;
+}
+.pearlEventsExhibitionsPvtLtd {
+  margin-top: 9px;
+  font: 400 16px/1.8 Roboto, -apple-system, Roboto, Helvetica, sans-serif;
+}
+.column2 {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 15%;
+  margin-left: 20px;
+}
+@media (max-width: 991px) {
+  .column2 {
+    width: 100%;
+  }
+}
+.img3 {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 70px !important;
+}
+@media (max-width: 991px) {
+  .img3 {
+    margin-top: 40px;
+  }
+}

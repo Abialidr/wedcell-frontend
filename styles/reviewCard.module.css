@@ -1,0 +1,15 @@
+.stickerContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  row-gap: 20px;
+  width: 100%;
+  padding: 10px 10px;
+}
+.sticker {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.sticker {
+  font-size: 12px;
+}

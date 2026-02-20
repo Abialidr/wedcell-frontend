@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Smokum&family=Solway:wght@300;400;500;700;800&display=swap");
+
+.student_card_wrapper {
+  margin: 25px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 25px !important;
+  row-gap: 25px !important;
+}
+.typo1 {
+  font-family: "Poppins" !important;
+  font-weight: 400 !important;
+  font-size: 62px !important;
+  line-height: 92px !important;
+  color: #ffffff !important;
+}
+
+.typo2 {
+  font-family: "Poppins" !important;
+  font-weight: 250 !important;
+  font-size: 36px !important;
+  line-height: 54px !important;
+  color: #ffffff !important;
+  margin-bottom: 46px !important;
+}
+
+.black_box {
+  height: 400px !important;
+  background-color: #ffdbd3 !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.after_black_box {
+  margin: 0px 50px 60px !important;
+}
+
+.search_bar {
+  padding: 0px 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 620px !important;
+  height: 75px !important;
+  border-radius: 37.5px !important;
+  overflow: hidden !important;
+}
+.search_icon {
+  width: 86px !important;
+  height: 86px !important;
+  background: linear-gradient(92.19deg, #9ff897 1.3%, #c9ff56 98.71%), #d9d9d9 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .black_box {
+    height: 325px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .student_card_wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    column-gap: 50px !important;
+  }
+  .typo1 {
+    margin-top: 10px !important;
+    font-size: 52px !important;
+    line-height: 60px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .typo2 {
+    font-size: 35px !important;
+    line-height: 40px !important;
+    margin-bottom: 25px !important;
+  }
+  .search_bar {
+    padding: 0px 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 450px !important;
+    height: 50px !important;
+    border-radius: 37.5px !important;
+    overflow: hidden !important;
+  }
+  .search_icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .search_logo {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .typo1 {
+    margin-top: 10px !important;
+    font-size: 42px !important;
+    line-height: 50px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .typo2 {
+    font-size: 22px !important;
+    line-height: 30px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .search_bar {
+    padding: 0px 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 400px !important;
+    height: 50px !important;
+    border-radius: 37.5px !important;
+    overflow: hidden !important;
+  }
+  .search_icon {
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: 10px !important;
+  }
+  .search_logo {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .student_card_wrapper {
+    margin: 10px !important;
+  }
+  .after_black_box {
+    margin: 0px 10px 10px !important;
+  }
+  .search_bar {
+    width: 200px !important;
+  }
+}

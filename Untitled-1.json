@@ -1,0 +1,260 @@
+{
+  "rootId": "ff937e49-1a5a-41ec-abdd-5e589ee6e1fd",
+  "layers": {
+    "ff937e49-1a5a-41ec-abdd-5e589ee6e1fd": {
+      "type": { "resolvedName": "GroupLayer" },
+      "props": {
+        "position": { "x": 422, "y": 235 },
+        "boxSize": { "width": 732.5, "height": 438 },
+        "scale": 1,
+        "rotate": 0
+      },
+      "locked": false,
+      "child": [
+        "7e599141-bdf5-4d5c-a34c-3be803015c74",
+        "2aaea525-bd7c-47ca-ba1d-2aab160e6d36"
+      ],
+      "parent": "ROOT"
+    },
+    "7e599141-bdf5-4d5c-a34c-3be803015c74": {
+      "type": { "resolvedName": "TextLayer" },
+      "props": {
+        "text": "<p style=\"font-family: Libre Franklin; color: rgb(255, 223, 43); font-size: 20px; text-align: center\"><strong>BIG</strong></p>",
+        "position": { "x": 0, "y": 0 },
+        "boxSize": { "width": 732.5, "height": 266, "x": 424, "y": 257 },
+        "scale": 9.5,
+        "rotate": 0,
+        "fonts": [
+          {
+            "name": "Libre Franklin",
+            "fonts": [
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "style": "Bold_Italic",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              },
+              {
+                "style": "Italic",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              }
+            ]
+          }
+        ],
+        "colors": ["rgb(255, 223, 43)"],
+        "fontSizes": [20]
+      },
+      "locked": false,
+      "child": [],
+      "parent": "ff937e49-1a5a-41ec-abdd-5e589ee6e1fd"
+    },
+    "2aaea525-bd7c-47ca-ba1d-2aab160e6d36": {
+      "type": { "resolvedName": "TextLayer" },
+      "props": {
+        "text": "<p style=\"font-family: Libre Franklin; color: rgb(255, 223, 43); font-size: 20px; text-align: center\"><strong>SALE</strong></p>",
+        "position": { "x": 0, "y": 172 },
+        "boxSize": { "width": 732.5, "height": 266, "x": 421, "y": 423 },
+        "scale": 9.5,
+        "rotate": 0,
+        "fonts": [
+          {
+            "name": "Libre Franklin",
+            "fonts": [
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "style": "Bold_Italic",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Bold.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              },
+              {
+                "style": "Italic",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/LibreFranklin/LibreFranklin-Regular.woff2"
+                ]
+              }
+            ]
+          }
+        ],
+        "colors": ["rgb(255, 223, 43)"],
+        "fontSizes": [20],
+        "effect": { "name": "hollow", "settings": { "thickness": 50 } }
+      },
+      "locked": false,
+      "child": [],
+      "parent": "ff937e49-1a5a-41ec-abdd-5e589ee6e1fd"
+    }
+  }
+}
+{
+  "rootId": "4eb9ab6a-97fa-41fb-a01d-58f4d4afb6bf",
+  "layers": {
+    "4eb9ab6a-97fa-41fb-a01d-58f4d4afb6bf": {
+      "type": { "resolvedName": "GroupLayer" },
+      "props": {
+        "position": { "x": 364, "y": 114 },
+        "boxSize": { "width": 368.5, "height": 154 },
+        "scale": 1,
+        "rotate": 0,
+        "eventId": ""
+      },
+      "locked": false,
+      "child": [
+        "62d3bca7-fa2a-4ae1-bbd5-628db3de7150",
+        "2bd4d6cb-108e-4b30-a770-ac4d324c1e6f",
+        "13206dfa-db88-4955-8b78-6ecfcfe45797"
+      ],
+      "parent": "ROOT"
+    },
+    "62d3bca7-fa2a-4ae1-bbd5-628db3de7150": {
+      "type": { "resolvedName": "TextLayer" },
+      "props": {
+        "text": "<p style=\"font-family: Parisienne; color: rgb(0, 0, 0); font-size: 42px; text-align: center\">Thank you for coming!</p>",
+        "position": { "x": 0, "y": 0 },
+        "boxSize": { "width": 368.5, "height": 59, "x": 594, "y": 350 },
+        "scale": 1,
+        "rotate": 0,
+        "fonts": [
+          {
+            "name": "Parisienne",
+            "fonts": [
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/Parisienne/Parisienne-Regular.woff2"
+                ]
+              }
+            ]
+          }
+        ],
+        "colors": ["rgb(0, 0, 0)"],
+        "fontSizes": [42]
+      },
+      "locked": false,
+      "child": [],
+      "parent": "4eb9ab6a-97fa-41fb-a01d-58f4d4afb6bf"
+    },
+    "2bd4d6cb-108e-4b30-a770-ac4d324c1e6f": {
+      "type": { "resolvedName": "TextLayer" },
+      "props": {
+        "text": "<p style=\"font-family: Oswald; color: rgb(0, 0, 0); font-size: 18px; text-align: center\">We would like to express our sincerest gratitude for celebrating our wedding with us.</p>",
+        "position": { "x": 29.29166666666697, "y": 67 },
+        "boxSize": {
+          "width": 309.91666666666606,
+          "height": 50,
+          "x": 623,
+          "y": 415
+        },
+        "scale": 1,
+        "rotate": 0,
+        "fonts": [
+          {
+            "name": "Oswald",
+            "fonts": [
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/Oswald/Oswald-Bold.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/Oswald/Oswald-Regular.woff2"
+                ]
+              }
+            ]
+          }
+        ],
+        "colors": ["rgb(0, 0, 0)"],
+        "fontSizes": [18],
+        "effect": null
+      },
+      "locked": false,
+      "child": [],
+      "parent": "4eb9ab6a-97fa-41fb-a01d-58f4d4afb6bf"
+    },
+    "13206dfa-db88-4955-8b78-6ecfcfe45797": {
+      "type": { "resolvedName": "TextLayer" },
+      "props": {
+        "text": "<p style=\"font-family: Oswald; color: rgb(0, 0, 0); font-size: 18px; text-transform: uppercase; text-align: center\"><strong>bella &amp; bryle</strong></p>",
+        "position": { "x": 53.29166666666697, "y": 129 },
+        "boxSize": {
+          "width": 261.91666666666606,
+          "height": 25,
+          "x": 644,
+          "y": 486
+        },
+        "scale": 1,
+        "rotate": 0,
+        "fonts": [
+          {
+            "name": "Oswald",
+            "fonts": [
+              {
+                "style": "Bold",
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/Oswald/Oswald-Bold.woff2"
+                ]
+              },
+              {
+                "urls": [
+                  "https://api-gilt-one.vercel.app/assets/liquid-editor/fonts/raw/master/src/fonts/Oswald/Oswald-Regular.woff2"
+                ]
+              }
+            ]
+          }
+        ],
+        "colors": ["rgb(0, 0, 0)"],
+        "fontSizes": [18],
+        "effect": null
+      },
+      "locked": false,
+      "child": [],
+      "parent": "4eb9ab6a-97fa-41fb-a01d-58f4d4afb6bf"
+    }
+  }
+}

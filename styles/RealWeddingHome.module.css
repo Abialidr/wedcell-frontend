@@ -1,0 +1,97 @@
+.banner {
+  width: 100%;
+  height: 307px;
+  background: url(https://wedfield.s3.ap-south-1.amazonaws.com/public/images/webp/RealWeddingHomeBanner.webp),
+    #d9d9d9;
+}
+
+.mycard {
+  width: 250px;
+  height: 280px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  margin: 20px 0;
+}
+.cardContainerReal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  margin-top: 99px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 75%;
+}
+
+.one {
+  width: 50%;
+  height: 100%;
+  margin-right: 5px;
+}
+
+.two,
+.three {
+  width: 100%;
+  height: 54.5%;
+}
+
+.two {
+  margin-bottom: 5px;
+}
+
+.content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.mobilecontainer {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  .mycard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .mobilecontainer {
+    display: inherit;
+  }
+
+  .two {
+    margin-right: 5px;
+    height: 120px;
+  }
+
+  .three {
+    height: 120px;
+  }
+
+  .mobileone {
+    width: 100%;
+    height: 100px;
+  }
+}

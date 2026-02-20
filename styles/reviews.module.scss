@@ -1,0 +1,184 @@
+.hello {
+  font-size: 30px;
+}
+.mainReviewBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 5% !important;
+  padding-right: 15%;
+  margin-top: 5%;
+  padding-top: 30px;
+  border-top: 1px solid grey;
+  gap: 20px;
+}
+.ReviewContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ReviewUser {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}
+.ReviewUser h6 {
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  font-size: 19px;
+}
+.ReviewCountryDate {
+  font-size: 14px;
+  color: rgba(72, 72, 72, 0.834);
+}
+.ReviewSpan span {
+  font-size: 15px;
+  line-break: anywhere;
+}
+.ReviewStar {
+  margin-top: -10px;
+  margin-bottom: -7px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.ReviewStar span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.Viewbtn {
+  font-size: 14px;
+}
+.Viewbtn:hover {
+  color: #b6255a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ReplyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 50px;
+}
+.ReplyContainer .ReviewUser h6 {
+  font-size: 17px;
+}
+.ReplyContainer .ReviewCountryDate {
+  margin-top: -5px;
+}
+.tagImg {
+  width: 50px;
+  transform: rotate(270deg);
+  height: 100px;
+}
+.exclusive {
+  z-index: 20;
+  width: 100px;
+  height: 28px;
+  left: 0;
+  box-shadow: 0px 4px 3px -2px rgba(0, 0, 0, 0.22);
+  margin-right: 40px;
+}
+.exclusive img {
+  position: absolute;
+}
+.exclusive span {
+  color: #ffffff;
+  font-size: 12px;
+  position: absolute;
+  top: 4.5px;
+  left: 28px;
+  white-space: nowrap;
+}
+.exclusivecontainer {
+  position: relative;
+  margin-bottom: 10px;
+}
+.star2 {
+  height: 20px;
+  width: 20px;
+  top: 4.5px;
+  left: 5px;
+  color: #ffffff;
+  width: 20px;
+}
+.rectangle {
+  width: 133px;
+  height: 28px;
+}
+.qualitycontainer {
+  grid-template-columns: 1fr 1fr;
+}
+.ReviewContainer1 {
+  background: #ffffff;
+  padding: 15px;
+  display: flex;
+  border-radius: 6px;
+  gap: 10px;
+  > div {
+    width: 100%;
+    .ReviewUser {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center;
+      hgroup {
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25.83px;
+        text-align: left;
+        color: #5a5a5a;
+      }
+      .ReviewCountryDate {
+        font-family: Poppins, sans-serif;
+        font-size: 10.73px;
+        font-weight: 400;
+        line-height: 16.09px;
+        text-align: left;
+        color: #5a5a5a;
+      }
+      .ReviewStar {
+        width: fit-content;
+      }
+    }
+    .ReviewSpan {
+      display: flex;
+      flex-direction: column;
+      margin: 7px 0px 10px 0px;
+      gap: 0px;
+      > :nth-child(1) {
+        font-family: Poppins, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: justified;
+        color: #333333;
+      }
+      > :nth-child(2) {
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28.9px;
+        text-align: justified;
+
+        color: #5a5a5a;
+      }
+    }
+    .excluivespan {
+      font-size: 11px;
+      margin-left: 2px;
+      margin-top: 2px;
+    }
+  }
+}

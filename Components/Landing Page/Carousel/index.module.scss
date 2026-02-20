@@ -1,0 +1,133 @@
+// .main {
+//   margin-top: 140px;
+// }
+
+.cardMain {
+  width: 450px;
+  height: 200px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    span {
+      font-family: Gill Sans MT;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    .imgDiv {
+      display: flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  // margin: 0px 30px;
+  // padding: 20px;
+}
+.carousel2 {
+  position: relative;
+  overflow: hidden;
+  display: none;
+  flex-direction: row;
+}
+.carousel_item {
+  min-width: 100% !important;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel_item img {
+  width: 100%;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+  color: #b6255a;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0px 8px 16px 0px #0000003f;
+  z-index: 9;
+  // box-shadow: 0px 0px 4px 0px #0000000a;
+  @media (max-width: 900px) {
+    display: none !important;
+  }
+}
+
+.prev {
+  left: 1%;
+  @media (max-width: 900px) {
+    left: -20px;
+  }
+}
+.prev img {
+  transform: rotate(180deg);
+}
+.next {
+  right: 1%;
+  @media (max-width: 900px) {
+    right: -20px;
+  }
+}
+.main {
+  position: relative;
+}
+
+.video-main {
+  border-radius: 15px;
+  overflow: hidden;
+  /* width: 100vw; */
+  height: 700px;
+  padding: 0px 70px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

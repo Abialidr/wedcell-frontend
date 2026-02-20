@@ -1,0 +1,110 @@
+.form_container
+{
+    padding: 20px 25px;
+}
+.label
+{
+    padding-bottom: 7px;
+}
+.nameInput
+{
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #252328;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+.select_tag
+{
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    padding: 13px 16px;
+    margin-bottom: 5px;
+}
+.price_tag
+{
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #252328;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+.phone_tag
+{
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #252328;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e8e8e8;
+   
+    margin-bottom: 5px;
+}
+.email_tag
+{
+    display: block;
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #252328;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e8e8e8;
+   
+    margin-bottom: 5px;
+}
+.btn_wrapper
+{
+    text-align: center;
+    padding-top: 5px;
+}
+.btn
+{
+    padding: 6px 23px;
+    border: none;
+    margin-bottom: 5px;
+}
+.submitbtn
+{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+   
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 4px;
+    word-wrap: break-word;
+    white-space: normal !important;
+    line-height: 26px;
+    text-transform: capitalize;
+    width: 20%;
+    margin-left: 11px;
+    margin-top: 5px;
+}
+.category_section {
+    margin: 10;
+}

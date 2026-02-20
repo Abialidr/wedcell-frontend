@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.mainWrapper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  border-radius: 7px;
+  overflow: hidden;
+  @media (max-width: 900px) {
+    margin-top: 0px;
+  }
+}
+
+.bgWrapper {
+  width: 100%;
+  height: 100%;
+  background: url('/assests/service.png');
+  background-position: 0px -400px;
+  background-size: contain;
+  background-size: 100%;
+  background-color: rgb(8, 8, 8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-repeat: no-repeat; */
+}
+
+.innerContent1 {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    89.47deg,
+    #b6255a -19.28%,
+    rgba(99, 0, 0, 0) 110.64%
+  );
+  padding: 20px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.innerContent1 h1 {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: 'Poppins', sans-serif !important;
+  @media (max-width: 900px) {
+    font-size: 27px;
+  }
+}
+
+.innerContent1 p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.14000000059604645px;
+  text-align: left;
+  color: white;
+  max-width: 800px;
+  @media (max-width: 900px) {
+    font-size: 12px;
+  }
+}
+
+.btn {
+  display: flex;
+}
+
+.btn span {
+  height: 20px;
+  width: 20px;
+
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.4rem;
+}
+
+.active {
+  border: 1px solid white;
+}
+
+.btn button {
+  padding: 5px;
+  outline: none;
+  border: none;
+  background-color: gray;
+  border-radius: 100%;
+  margin: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  /* padding: 2rem 0; */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  > div {
+    border: 1px solid #00000042;
+    padding: 10px;
+    border-radius: 8px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    h3 {
+      font-family: Poppins;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 33.6px;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      @media (max-width: 900px) {
+        font-size: 16px;
+      }
+    }
+    p {
+      margin: 0;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 27px;
+      text-align: left;
+      @media (max-width: 900px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.imgWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.rightSideContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.pointsBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pointsBtn button {
+  width: 150px;
+  height: 48px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+  background: #ff3434;
+  border-radius: 12px;
+  border: none;
+}
+
+.points > div {
+  display: flex;
+  align-items: center;
+}
+
+.points > div p {
+  /* text-align: start ; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.plansWrapper {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  .wrapper {
+    padding: 30px 20px 30px 20px;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    > div {
+      width: 50%;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+      .heading {
+        h2 {
+          margin: 0;
+          width: 100%;
+          padding-left: 20px;
+          color: white;
+          font-family: Poppins;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 69px;
+          text-align: left;
+          @media (max-width: 900px) {
+            font-size: 20px;
+            padding: 0;
+            line-height: 39px;
+          }
+        }
+      }
+    }
+  }
+  .contentInfo {
+    margin-top: 30px;
+    > div {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        > img {
+          margin-top: 3px;
+          width: 18px;
+          @media (max-width: 900px) {
+            width: 14px;
+          }
+        }
+        max-width: 550px;
+        display: flex;
+        align-items: start;
+        gap: 3px;
+        font-family: Poppins;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: left;
+        color: white;
+        @media (max-width: 900px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .plansRight {
+    display: flex;
+    justify-content: center;
+    > div {
+      padding: 20px;
+      width: fit-content;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+
+      > div {
+        gap: 15px;
+        width: 100%;
+        > input {
+          border: none !important;
+          outline: none;
+          background: #f2f2f2;
+          border: 0.5px solid #e5e5e5;
+          border-radius: 6px;
+          margin: 0;
+          padding: 10px 20px !important;
+          height: fit-content;
+          width: 100%;
+        }
+      }
+      background: linear-gradient(0.96deg, #d142a2 -173.37%, #170e26 99.59%);
+      h4 {
+        font-family: Poppins;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0.30000001192092896px;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        color: #ffffff;
+        margin-bottom: 30px;
+        @media (max-width: 900px) {
+          font-size: 18px;
+        }
+      }
+
+      button {
+        background: #b6255a;
+        color: white;
+        height: fit-content;
+        padding: 8px;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 60px;
+        @media (max-width: 900px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #561f50;
+  border: none;
+  border-radius: 8px;
+}
+
+.infoRight h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1rem;
+}
+
+.inputWrapper input {
+  outline: none;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  width: 387px;
+  height: 48px;
+  background: #ffffff;
+  border: 0.5px solid #ff3434;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 1rem 0;
+}
+.inputWrapper input[type='date'],
+.inputWrapper input[type='time'] {
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  padding-left: 0.75rem;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  border: 0.5px solid #ff3434;
+  font-weight: 600;
+  color: gray;
+  /* -moz-appearance: textfield; */
+  -webkit-appearance: none;
+  margin: 0;
+  height: 48px;
+  margin: 1rem 0;
+}
+
+.inputWrapper input[type='date']::placeholder,
+.inputWrapper input[type='time']::placeholder {
+  font-family: 'Roboto';
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inputWrapper input[type='date']::-webkit-calendar-picker-indicator,
+.inputWrapper input[type='time']::-webkit-calendar-picker-indicator {
+  background: none;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.inputWrapper input[type='date']::-webkit-datetime-edit,
+.inputWrapper input[type='time']::-webkit-datetime-edit {
+  padding-left: 20px;
+  width: 100%;
+}
+.inputWrapper input::placeholder {
+  font-weight: 700;
+}
+
+.plansRight h4 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.infoLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cricle {
+  margin: 1rem 0 !important;
+}
+
+.plansLeft .twofive {
+  font-size: 22px;
+  text-decoration: line-through;
+  margin-left: 10px;
+  @media (max-width: 900px) {
+    font-size: 15px;
+  }
+}
+
+.plansLeft .five {
+  color: red;
+}
+
+.cricle {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.submitBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtn button {
+  width: 137px;
+  height: 48px;
+  outline: none;
+  border: none;
+  background: #ff3434;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: white;
+}
+
+.wedCell {
+  display: none;
+}
+
+/*------------------ mobile responsiveness started here -----------------------------*/
+.right {
+  margin-top: 20px;
+  display: flex;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 57px;
+    text-align: left;
+  }
+  > img {
+    width: 50%;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+  > div {
+    width: 50%;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+    > div {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: left;
+      p {
+        margin: 0;
+      }
+    }
+    .points {
+      width: 100%;
+    }
+    .pointsBtn {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      margin-top: 20px;
+
+      > button {
+        background: #b6255a;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        height: fit-content;
+        color: white;
+        border-radius: 30px;
+        padding: 7px;
+      }
+    }
+  }
+}
