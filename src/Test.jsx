@@ -52,29 +52,31 @@ const Test = () => {
         const div = document.querySelector(
           `.mediaquery9 > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child`
         );
-        if (Object.keys(state.selectedLayers).length) {
+        if (div && Object.keys(state.selectedLayers).length) {
           if (state.selectedLayers[0][0] === 'ROOT') {
-            div?.style.overflow = 'scroll';
+            div.style.overflow = 'scroll';
           } else {
-            const scrollPosition = div?.scrollTop;
-            div?.style.overflow = 'hidden';
+            const scrollPosition = div.scrollTop;
+            div.style.overflow = 'hidden';
             // document.documentElement.style.setProperty(
             //   '--page-scrollable',
             //   'hidden'
             // );
-            // div?.scrollTop = 100;
+            // div.scrollTop = 100;
           }
         }
   
-        if (state.pageSize.height * state.scale >= windowHeight - 300) {
-          div?.style['justify-content'] = 'start';
-        } else {
-          div?.style['justify-content'] = 'center';
-        }
-        if (state.pageSize.width * state.scale >= windowWidth) {
-          div?.style['align-items'] = 'start';
-        } else {
-          div?.style['align-items'] = 'center';
+        if (div) {
+          if (state.pageSize.height * state.scale >= windowHeight - 300) {
+            div.style['justify-content'] = 'start';
+          } else {
+            div.style['justify-content'] = 'center';
+          }
+          if (state.pageSize.width * state.scale >= windowWidth) {
+            div.style['align-items'] = 'start';
+          } else {
+            div.style['align-items'] = 'center';
+          }
         }
       }
     }
