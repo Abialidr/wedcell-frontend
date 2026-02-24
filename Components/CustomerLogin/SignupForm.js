@@ -27,7 +27,7 @@ import {
   useCreateUserAccountMutation,
   useVerifyOtpMutation,
 } from "redux/Api/signInAndLogin.api";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import compressAndAppendFiles from "Components/compressAndAppendFiles";
 import { S3PROXY } from "../../config";
 const SignupForm = ({ setChangeState }) => {
@@ -81,8 +81,7 @@ const SignupForm = ({ setChangeState }) => {
       // alert('Please Agree Terms And Conditions');
 
       toast.error(
-        `Please ${
-          !checked ? "Agree Terms And Conditions" : "Enter Proper Number"
+        `Please ${!checked ? "Agree Terms And Conditions" : "Enter Proper Number"
         } `,
         {
           position: "top-right",
@@ -239,10 +238,10 @@ const SignupForm = ({ setChangeState }) => {
 
   const [isValid, setIsValid] = useState(false);
   const [value, setValue] = useState("");
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     const parsedPhoneNumber = parsePhoneNumberFromString(
       newValue,
-      country.Name
+      info.countryCode
     );
     const isValidPhoneNumber = parsedPhoneNumber
       ? parsedPhoneNumber.isValid()
@@ -273,10 +272,10 @@ const SignupForm = ({ setChangeState }) => {
                 {currState === 0
                   ? "Create An Account"
                   : currState === 1
-                  ? "Wedding Details"
-                  : currState === 2
-                  ? "Otp Verification"
-                  : ""}
+                    ? "Wedding Details"
+                    : currState === 2
+                      ? "Otp Verification"
+                      : ""}
               </span>
             </div>
             <Stepper
@@ -328,26 +327,26 @@ const SignupForm = ({ setChangeState }) => {
                     />
                   </article>
                   <article>
-                    <MuiPhoneNumber
+                    <MuiTelInput
                       value={value}
                       id="outlined-basic"
                       label="Mobile No"
                       variant="outlined"
                       fullWidth
-                      defaultCountry={"in"}
+                      defaultCountry={"IN"}
                       onChange={handleChange}
                       onlyCountries={[
-                        "ae",
-                        "in",
-                        "th",
-                        "lk",
-                        "id",
-                        "ca",
-                        "mv",
-                        "vn",
-                        "kh",
-                        "ph",
-                        "my",
+                        "AE",
+                        "IN",
+                        "TH",
+                        "LK",
+                        "ID",
+                        "CA",
+                        "MV",
+                        "VN",
+                        "KH",
+                        "PH",
+                        "MY",
                       ]}
                     />
                     {!isValid && (
@@ -396,7 +395,7 @@ const SignupForm = ({ setChangeState }) => {
                           fileList={fileListmain}
                           maxCount={1}
                           onChange={handleChange2}
-                          // onPreview={onPreview}
+                        // onPreview={onPreview}
                         >
                           {fileListmain?.length < 1 && (
                             <div
@@ -435,7 +434,7 @@ const SignupForm = ({ setChangeState }) => {
                           fileList={fileListmain1}
                           maxCount={1}
                           onChange={handleChange3}
-                          // onPreview={onPreview}
+                        // onPreview={onPreview}
                         >
                           {fileListmain1?.length < 1 && (
                             <div
@@ -617,7 +616,7 @@ const SignupForm = ({ setChangeState }) => {
                             eventDate: e,
                           })
                         }
-                        // defaultValue={}
+                      // defaultValue={}
                       />
                     </LocalizationProvider>
                   </article>
@@ -715,8 +714,8 @@ const SignupForm = ({ setChangeState }) => {
                     {isTimerRunning
                       ? `Resend in ${timer} seconds`
                       : otpSent
-                      ? "Otp Resend Successfully"
-                      : "Resend OTP"}
+                        ? "Otp Resend Successfully"
+                        : "Resend OTP"}
                   </button>
                 </>
               ) : (

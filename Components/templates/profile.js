@@ -25,7 +25,7 @@ import {
   useUpdatePasswordWithOldPasswordMutation,
   useVerifyOtpinprofileMutation,
 } from "redux/Api/signInAndLogin.api";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import parsePhoneNumberFromString from "libphonenumber-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaTrash } from "react-icons/fa";
@@ -99,19 +99,19 @@ const ProfileScreenTemplate = () => {
           user?.data?.shipping_address
             ? JSON.parse(JSON.stringify(user?.data?.shipping_address))
             : [
-                {
-                  address1: "",
-                  address2: "",
-                  landmark: "",
-                  state: "",
-                  country: "",
-                  city: "",
-                  pincode: "",
-                  name: "",
-                  email: "",
-                  number: "",
-                },
-              ]
+              {
+                address1: "",
+                address2: "",
+                landmark: "",
+                state: "",
+                country: "",
+                city: "",
+                pincode: "",
+                name: "",
+                email: "",
+                number: "",
+              },
+            ]
         );
         setIsEmailVerified(true);
         setIsMobileVerified(true);
@@ -248,10 +248,10 @@ const ProfileScreenTemplate = () => {
 
   const [isValid, setIsValid] = useState(true);
   const [value, setValue] = useState();
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     const parsedPhoneNumber = parsePhoneNumberFromString(
       newValue,
-      country.Name
+      info.countryCode
     );
     const isValidPhoneNumber = parsedPhoneNumber
       ? parsedPhoneNumber.isValid()
@@ -394,26 +394,26 @@ const ProfileScreenTemplate = () => {
             </Box>
           )}
 
-          <MuiPhoneNumber
+          <MuiTelInput
             value={value}
             id="outlined-basic"
             label="Mobile No"
             variant="outlined"
             fullWidth
-            defaultCountry={"in"}
+            defaultCountry={"IN"}
             onChange={handleChange}
             onlyCountries={[
-              "ae",
-              "in",
-              "th",
-              "lk",
-              "id",
-              "ca",
-              "mv",
-              "vn",
-              "kh",
-              "ph",
-              "my",
+              "AE",
+              "IN",
+              "TH",
+              "LK",
+              "ID",
+              "CA",
+              "MV",
+              "VN",
+              "KH",
+              "PH",
+              "MY",
             ]}
           />
           {/* <TextField

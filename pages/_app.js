@@ -25,7 +25,6 @@ import { isArray } from "lodash";
 import { useGetFontByLidosQuery } from "redux/Api/diff.api";
 import Layout from "Components/NewLayout/Layout";
 import { allFonts } from "../config/constants";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { S3PROXY } from "../config";
 import { PersistGate } from "redux-persist/integration/react";
 
@@ -62,7 +61,7 @@ function MyApp({ Component, pageProps }) {
         return data;
       });
       return fontsByLido;
-    } catch (e) {}
+    } catch (e) { }
   }, []);
   useEffect(() => {
     CapacitorApp.addListener("backButton", ({ canGoBack }) => {
@@ -115,8 +114,7 @@ function MyApp({ Component, pageProps }) {
       </Head> */}
           <ThemeProvider theme={theme}>
             <Layout>
-              <GoogleAnalytics gaId="GTM-M7N7S9JN" />
-              <GoogleTagManager gaId="G-QQ8BR05BWM" />
+
 
               <Component {...props} key={router.asPath} />
             </Layout>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/LoginAndSignup/LoginForm.module.scss";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import { Box, Modal, TextField } from "@mui/material";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -100,7 +100,7 @@ const LoginModal = ({ open, setOpen }) => {
         document.cookie =
           `id=${res?.data?.data?.id}; path=/; expires=` +
           new Date(
-            new Date().getTime() + 7 * 24 * 60 * 60 * 1000
+            new Date().getTime() + 7 * 24 * 60 * 60 * 1000,
           ).toUTCString();
         localStorage.setItem("wedfieldIsLoged", "true");
         localStorage.setItem("role", JSON.stringify({ role: "User" }));
@@ -122,7 +122,7 @@ const LoginModal = ({ open, setOpen }) => {
     }
   };
   const [value, setValue] = useState("");
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     setValue(newValue);
     setcurrState(0);
     setEmailPhone(newValue.replace(/[^\d]/g, ""));
@@ -161,26 +161,26 @@ const LoginModal = ({ open, setOpen }) => {
             <div className={styles.Mainform}>
               <article>
                 {currState === 0 ? (
-                  <MuiPhoneNumber
+                  <MuiTelInput
                     value={value}
                     id="outlined-basic"
                     label="Mobile No"
                     variant="outlined"
                     fullWidth
-                    defaultCountry={"in"}
+                    defaultCountry={"IN"}
                     onChange={handleChange}
                     onlyCountries={[
-                      "ae",
-                      "in",
-                      "th",
-                      "lk",
-                      "id",
-                      "ca",
-                      "mv",
-                      "vn",
-                      "kh",
-                      "ph",
-                      "my",
+                      "AE",
+                      "IN",
+                      "TH",
+                      "LK",
+                      "ID",
+                      "CA",
+                      "MV",
+                      "VN",
+                      "KH",
+                      "PH",
+                      "MY",
                     ]}
                   />
                 ) : (

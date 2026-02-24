@@ -11,7 +11,7 @@ import {
   useCreateOtpMutation,
   useForgetPasswordMutation,
 } from "redux/Api/signInAndLogin.api";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import { S3PROXY } from "../../config";
 const ForgetPassword = ({ setChangeState }) => {
   const [otp, setOtp] = useState("");
@@ -110,7 +110,7 @@ const ForgetPassword = ({ setChangeState }) => {
     };
   }, [isTimerRunning, timer]);
   const [value, setValue] = useState("");
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     setValue(newValue);
     setMobile(newValue.replace(/[^\d]/g, ""));
   };
@@ -135,8 +135,8 @@ const ForgetPassword = ({ setChangeState }) => {
                 {currState === 0
                   ? "Forget Password"
                   : currState === 1
-                  ? "Forget Password"
-                  : ""}
+                    ? "Forget Password"
+                    : ""}
               </span>
             </div>
             <Stepper
@@ -164,26 +164,26 @@ const ForgetPassword = ({ setChangeState }) => {
               {currState === 0 ? (
                 <>
                   <article style={{ marginBottom: "20px" }}>
-                    <MuiPhoneNumber
+                    <MuiTelInput
                       value={value}
                       id="outlined-basic"
                       label="Mobile No"
                       variant="outlined"
                       fullWidth
-                      defaultCountry={"in"}
+                      defaultCountry={"IN"}
                       onChange={handleChange}
                       onlyCountries={[
-                        "ae",
-                        "in",
-                        "th",
-                        "lk",
-                        "id",
-                        "ca",
-                        "mv",
-                        "vn",
-                        "kh",
-                        "ph",
-                        "my",
+                        "AE",
+                        "IN",
+                        "TH",
+                        "LK",
+                        "ID",
+                        "CA",
+                        "MV",
+                        "VN",
+                        "KH",
+                        "PH",
+                        "MY",
                       ]}
                     />
                     {/* <TextField
@@ -261,8 +261,8 @@ const ForgetPassword = ({ setChangeState }) => {
                     {isTimerRunning
                       ? `Resend in ${timer} seconds`
                       : otpSent
-                      ? "Otp Resend Successfully"
-                      : "Resend OTP"}
+                        ? "Otp Resend Successfully"
+                        : "Resend OTP"}
                   </button>
                 </>
               ) : (

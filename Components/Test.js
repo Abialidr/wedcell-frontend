@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
-import ReactHtmlParser from "react-html-parser";
+
 // import { data } from '../data';
 import { Box, MenuItem, Modal, Select } from "@mui/material";
 import { data as Data1 } from "../data";
@@ -105,15 +105,13 @@ function test({ id, FamilyId }) {
           return `@font-face {
                   font-family: ${data.fontStyle};
                   src: url(${data.urls[0]}) format('woff2');
-                  ${
-                    data?.style?.includes("Bold")
-                      ? `font-weight: bold;`
-                      : `font-weight: 400;`
-                  }${
-            data?.style?.includes("Italic")
+                  ${data?.style?.includes("Bold")
+              ? `font-weight: bold;`
+              : `font-weight: 400;`
+            }${data?.style?.includes("Italic")
               ? `font-style: italic;`
               : `font-style: normal;`
-          }
+            }
                 }`;
         })
         .flat()
@@ -212,27 +210,26 @@ function test({ id, FamilyId }) {
                 caretColor: "transparent",
                 cursor: mainData[0]?.layers[childId].props.eventId
                   ? family?.Events?.includes(
-                      mainData[0]?.layers[childId].props.eventId
-                    )
+                    mainData[0]?.layers[childId].props.eventId
+                  )
                     ? "pointer"
                     : "not-allowed"
                   : "default",
                 opacity: mainData[0]?.layers[childId].props.eventId
                   ? family?.Events?.includes(
-                      mainData[0]?.layers[childId].props.eventId
-                    )
+                    mainData[0]?.layers[childId].props.eventId
+                  )
                     ? 1
                     : 0.3
                   : 1,
               }}
-              className={`${
-                mainData[0]?.layers[childId].props.eventId &&
-                family?.Events?.includes(
-                  mainData[0]?.layers[childId].props.eventId
-                )
+              className={`${mainData[0]?.layers[childId].props.eventId &&
+                  family?.Events?.includes(
+                    mainData[0]?.layers[childId].props.eventId
+                  )
                   ? "breath"
                   : ""
-              }`}
+                }`}
             >
               <div
                 style={{
@@ -247,15 +244,170 @@ function test({ id, FamilyId }) {
                   transformOrigin: "0 0",
                   ...(data?.props?.effect?.name === "hollow"
                     ? {
-                        "caret-color": `${data.props.colors[0]}`,
-                        "-webkit-text-fill-color": "transparent",
-                        "-webkit-text-stroke": `${
-                          0.0199985 * data?.props?.effect?.settings.thickness
+                      "caret-color": `${data.props.colors[0]}`,
+                      "-webkit-text-fill-color": "transparent",
+                      "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
                         }px ${data.props.colors[0]}`,
-                      }
+                    }
                     : {}),
                   ...(data?.props?.effect?.name === "shadow"
                     ? {
+                      textShadow: `${convertRGBToRGBA(
+                        data?.props?.effect?.settings.color,
+                        data?.props?.effect?.settings.transparency / 100
+                      )} 
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "x",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "y",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${data?.props?.effect?.settings.blur}px`,
+                    }
+                    : {}),
+                  ...(data?.props?.effect?.name === "lift"
+                    ? {
+                      textShadow: `rgba(0,0,0,${0.055 * data?.props?.effect?.settings.intensity
+                        }) ${0}px ${2.1}px  ${2.1 + data?.props?.effect?.settings.intensity * 0.065
+                        }px`,
+                      filter: "opacity(1)",
+                    }
+                    : {}),
+                  ...(data?.props?.effect?.name === "echo"
+                    ? {
+                      textShadow: `${convertRGBToRGBA(
+                        data?.props?.effect?.settings.color,
+                        0.5
+                      )} 
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "x",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "y",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${0}px,
+                        ${convertRGBToRGBA(
+                        data?.props?.effect?.settings.color,
+                        0.3
+                      )} 
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        2,
+                        "x",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        2,
+                        "y",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${0}px
+                        `,
+                    }
+                    : {}),
+                  ...(data?.props?.effect?.name === "splice"
+                    ? {
+                      "caret-color": `${data.props.colors[0]}`,
+                      "-webkit-text-fill-color": "transparent",
+                      "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
+                        }px ${data.props.colors[0]}`,
+                      textShadow: `${data?.props?.effect?.settings.color} 
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "x",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${setTextShadow(
+                        data?.props?.effect?.settings.direction,
+                        data?.props?.effect?.settings.offset,
+                        1,
+                        "y",
+                        data?.props?.scale,
+                        data?.props?.fontSizes[0]
+                      )}px
+                        ${0}px`,
+                    }
+                    : {}),
+                }}
+              >
+                {data?.props.text.includes(`data-list-type="ordered"`) ? (
+                  <ol className="PList oList">
+                    {pTagArray.map((data, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: data }} />
+                    ))}
+                  </ol>
+                ) : (
+                  <ul className="PList">
+                    {pTagArray.map((data, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: data }} />
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          );
+        } else {
+          if (data?.props.rsvp) {
+            return (
+              <div
+                // onClick={() => handleSubmit()}
+                style={{
+                  height: `${data?.props.boxSize.height}px`,
+                  width: `${data?.props.boxSize.width}px`,
+                  position: "absolute",
+                  transform: `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
+                  caretColor: "transparent",
+                  // cursor: 'pointer',
+                }}
+              >
+                <div
+                  style={{
+                    height: `${data?.props.boxSize.height / data?.props.scale
+                      }px`,
+                    width: `${data?.props.boxSize.width / data?.props.scale}px`,
+                    position: "absolute",
+                    transform: `rotate(${data?.props.rotate}deg) scale(${data?.props.scale})`,
+                    fontSize: `${data?.props.fontSizes[0]}px`,
+                    fontFamily: `${data?.props.fonts[0].name}`,
+
+                    transformOrigin: "0 0",
+                    ...(data?.props?.effect?.name === "hollow"
+                      ? {
+                        "-webkit-text-fill-color": "transparent",
+                        "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
+                          }px ${data.props.colors[0]}`,
+                      }
+                      : {}),
+                    ...(data?.props?.effect?.name === "shadow"
+                      ? {
                         textShadow: `${convertRGBToRGBA(
                           data?.props?.effect?.settings.color,
                           data?.props?.effect?.settings.transparency / 100
@@ -278,19 +430,18 @@ function test({ id, FamilyId }) {
                         )}px
                         ${data?.props?.effect?.settings.blur}px`,
                       }
-                    : {}),
-                  ...(data?.props?.effect?.name === "lift"
-                    ? {
-                        textShadow: `rgba(0,0,0,${
-                          0.055 * data?.props?.effect?.settings.intensity
-                        }) ${0}px ${2.1}px  ${
-                          2.1 + data?.props?.effect?.settings.intensity * 0.065
-                        }px`,
+                      : {}),
+                    ...(data?.props?.effect?.name === "lift"
+                      ? {
+                        textShadow: `rgba(0,0,0,${0.055 * data?.props?.effect?.settings.intensity
+                          }) ${0}px ${2.1}px  ${2.1 +
+                          data?.props?.effect?.settings.intensity * 0.065
+                          }px`,
                         filter: "opacity(1)",
                       }
-                    : {}),
-                  ...(data?.props?.effect?.name === "echo"
-                    ? {
+                      : {}),
+                    ...(data?.props?.effect?.name === "echo"
+                      ? {
                         textShadow: `${convertRGBToRGBA(
                           data?.props?.effect?.settings.color,
                           0.5
@@ -335,14 +486,13 @@ function test({ id, FamilyId }) {
                         ${0}px
                         `,
                       }
-                    : {}),
-                  ...(data?.props?.effect?.name === "splice"
-                    ? {
+                      : {}),
+                    ...(data?.props?.effect?.name === "splice"
+                      ? {
                         "caret-color": `${data.props.colors[0]}`,
                         "-webkit-text-fill-color": "transparent",
-                        "-webkit-text-stroke": `${
-                          0.0199985 * data?.props?.effect?.settings.thickness
-                        }px ${data.props.colors[0]}`,
+                        "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
+                          }px ${data.props.colors[0]}`,
                         textShadow: `${data?.props?.effect?.settings.color} 
                         ${setTextShadow(
                           data?.props?.effect?.settings.direction,
@@ -362,168 +512,6 @@ function test({ id, FamilyId }) {
                         )}px
                         ${0}px`,
                       }
-                    : {}),
-                }}
-              >
-                {data?.props.text.includes(`data-list-type="ordered"`) ? (
-                  <ol className="PList oList">
-                    {pTagArray.map((data) => {
-                      return ReactHtmlParser(data);
-                    })}
-                  </ol>
-                ) : (
-                  <ul className="PList">
-                    {pTagArray.map((data) => {
-                      return ReactHtmlParser(data);
-                    })}
-                  </ul>
-                )}
-              </div>
-            </div>
-          );
-        } else {
-          if (data?.props.rsvp) {
-            return (
-              <div
-                // onClick={() => handleSubmit()}
-                style={{
-                  height: `${data?.props.boxSize.height}px`,
-                  width: `${data?.props.boxSize.width}px`,
-                  position: "absolute",
-                  transform: `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
-                  caretColor: "transparent",
-                  // cursor: 'pointer',
-                }}
-              >
-                <div
-                  style={{
-                    height: `${
-                      data?.props.boxSize.height / data?.props.scale
-                    }px`,
-                    width: `${data?.props.boxSize.width / data?.props.scale}px`,
-                    position: "absolute",
-                    transform: `rotate(${data?.props.rotate}deg) scale(${data?.props.scale})`,
-                    fontSize: `${data?.props.fontSizes[0]}px`,
-                    fontFamily: `${data?.props.fonts[0].name}`,
-
-                    transformOrigin: "0 0",
-                    ...(data?.props?.effect?.name === "hollow"
-                      ? {
-                          "-webkit-text-fill-color": "transparent",
-                          "-webkit-text-stroke": `${
-                            0.0199985 * data?.props?.effect?.settings.thickness
-                          }px ${data.props.colors[0]}`,
-                        }
-                      : {}),
-                    ...(data?.props?.effect?.name === "shadow"
-                      ? {
-                          textShadow: `${convertRGBToRGBA(
-                            data?.props?.effect?.settings.color,
-                            data?.props?.effect?.settings.transparency / 100
-                          )} 
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "x",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "y",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${data?.props?.effect?.settings.blur}px`,
-                        }
-                      : {}),
-                    ...(data?.props?.effect?.name === "lift"
-                      ? {
-                          textShadow: `rgba(0,0,0,${
-                            0.055 * data?.props?.effect?.settings.intensity
-                          }) ${0}px ${2.1}px  ${
-                            2.1 +
-                            data?.props?.effect?.settings.intensity * 0.065
-                          }px`,
-                          filter: "opacity(1)",
-                        }
-                      : {}),
-                    ...(data?.props?.effect?.name === "echo"
-                      ? {
-                          textShadow: `${convertRGBToRGBA(
-                            data?.props?.effect?.settings.color,
-                            0.5
-                          )} 
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "x",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "y",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${0}px,
-                        ${convertRGBToRGBA(
-                          data?.props?.effect?.settings.color,
-                          0.3
-                        )} 
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          2,
-                          "x",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          2,
-                          "y",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${0}px
-                        `,
-                        }
-                      : {}),
-                    ...(data?.props?.effect?.name === "splice"
-                      ? {
-                          "caret-color": `${data.props.colors[0]}`,
-                          "-webkit-text-fill-color": "transparent",
-                          "-webkit-text-stroke": `${
-                            0.0199985 * data?.props?.effect?.settings.thickness
-                          }px ${data.props.colors[0]}`,
-                          textShadow: `${data?.props?.effect?.settings.color} 
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "x",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${setTextShadow(
-                          data?.props?.effect?.settings.direction,
-                          data?.props?.effect?.settings.offset,
-                          1,
-                          "y",
-                          data?.props?.scale,
-                          data?.props?.fontSizes[0]
-                        )}px
-                        ${0}px`,
-                        }
                       : {}),
                   }}
                 >
@@ -556,15 +544,15 @@ function test({ id, FamilyId }) {
                   caretColor: "transparent",
                   cursor: mainData[0]?.layers[childId].props.eventId
                     ? family?.Events?.includes(
-                        mainData[0]?.layers[childId].props.eventId
-                      )
+                      mainData[0]?.layers[childId].props.eventId
+                    )
                       ? "pointer"
                       : "not-allowed"
                     : "default",
                   opacity: mainData[0]?.layers[childId].props.eventId
                     ? family?.Events?.includes(
-                        mainData[0]?.layers[childId].props.eventId
-                      )
+                      mainData[0]?.layers[childId].props.eventId
+                    )
                       ? 1
                       : 0.3
                     : 1,
@@ -572,9 +560,8 @@ function test({ id, FamilyId }) {
               >
                 <div
                   style={{
-                    height: `${
-                      data?.props.boxSize.height / data?.props.scale
-                    }px`,
+                    height: `${data?.props.boxSize.height / data?.props.scale
+                      }px`,
                     width: `${data?.props.boxSize.width / data?.props.scale}px`,
                     position: "absolute",
                     transform: `rotate(${data?.props.rotate}deg) scale(${data?.props.scale})`,
@@ -584,18 +571,17 @@ function test({ id, FamilyId }) {
                     transformOrigin: "0 0",
                     ...(data?.props?.effect?.name === "hollow"
                       ? {
-                          "-webkit-text-fill-color": "transparent",
-                          "-webkit-text-stroke": `${
-                            0.0199985 * data?.props?.effect?.settings.thickness
+                        "-webkit-text-fill-color": "transparent",
+                        "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
                           }px ${data.props.colors[0]}`,
-                        }
+                      }
                       : {}),
                     ...(data?.props?.effect?.name === "shadow"
                       ? {
-                          textShadow: `${convertRGBToRGBA(
-                            data?.props?.effect?.settings.color,
-                            data?.props?.effect?.settings.transparency / 100
-                          )} 
+                        textShadow: `${convertRGBToRGBA(
+                          data?.props?.effect?.settings.color,
+                          data?.props?.effect?.settings.transparency / 100
+                        )} 
                         ${setTextShadow(
                           data?.props?.effect?.settings.direction,
                           data?.props?.effect?.settings.offset,
@@ -613,25 +599,23 @@ function test({ id, FamilyId }) {
                           data?.props?.fontSizes[0]
                         )}px
                         ${data?.props?.effect?.settings.blur}px`,
-                        }
+                      }
                       : {}),
                     ...(data?.props?.effect?.name === "lift"
                       ? {
-                          textShadow: `rgba(0,0,0,${
-                            0.055 * data?.props?.effect?.settings.intensity
-                          }) ${0}px ${2.1}px  ${
-                            2.1 +
-                            data?.props?.effect?.settings.intensity * 0.065
+                        textShadow: `rgba(0,0,0,${0.055 * data?.props?.effect?.settings.intensity
+                          }) ${0}px ${2.1}px  ${2.1 +
+                          data?.props?.effect?.settings.intensity * 0.065
                           }px`,
-                          filter: "opacity(1)",
-                        }
+                        filter: "opacity(1)",
+                      }
                       : {}),
                     ...(data?.props?.effect?.name === "echo"
                       ? {
-                          textShadow: `${convertRGBToRGBA(
-                            data?.props?.effect?.settings.color,
-                            0.5
-                          )} 
+                        textShadow: `${convertRGBToRGBA(
+                          data?.props?.effect?.settings.color,
+                          0.5
+                        )} 
                         ${setTextShadow(
                           data?.props?.effect?.settings.direction,
                           data?.props?.effect?.settings.offset,
@@ -671,16 +655,15 @@ function test({ id, FamilyId }) {
                         )}px
                         ${0}px
                         `,
-                        }
+                      }
                       : {}),
                     ...(data?.props?.effect?.name === "splice"
                       ? {
-                          "caret-color": `${data.props.colors[0]}`,
-                          "-webkit-text-fill-color": "transparent",
-                          "-webkit-text-stroke": `${
-                            0.0199985 * data?.props?.effect?.settings.thickness
+                        "caret-color": `${data.props.colors[0]}`,
+                        "-webkit-text-fill-color": "transparent",
+                        "-webkit-text-stroke": `${0.0199985 * data?.props?.effect?.settings.thickness
                           }px ${data.props.colors[0]}`,
-                          textShadow: `${data?.props?.effect?.settings.color} 
+                        textShadow: `${data?.props?.effect?.settings.color} 
                         ${setTextShadow(
                           data?.props?.effect?.settings.direction,
                           data?.props?.effect?.settings.offset,
@@ -698,17 +681,16 @@ function test({ id, FamilyId }) {
                           data?.props?.fontSizes[0]
                         )}px
                         ${0}px`,
-                        }
+                      }
                       : {}),
                   }}
-                  className={`${
-                    mainData[0]?.layers[childId].props.eventId &&
-                    family?.Events?.includes(
-                      mainData[0]?.layers[childId].props.eventId
-                    )
+                  className={`${mainData[0]?.layers[childId].props.eventId &&
+                      family?.Events?.includes(
+                        mainData[0]?.layers[childId].props.eventId
+                      )
                       ? "breath"
                       : "hello"
-                  }`}
+                    }`}
                 >
                   <TextContent
                     text={hello}
@@ -742,27 +724,26 @@ function test({ id, FamilyId }) {
                 : `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
               cursor: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? "pointer"
                   : "not-allowed"
                 : "default",
               opacity: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? 1
                   : 0.3
                 : 1,
             }}
-            className={`${
-              mainData[0]?.layers[childId].props.eventId &&
-              family?.Events?.includes(
-                mainData[0]?.layers[childId].props.eventId
-              )
+            className={`${mainData[0]?.layers[childId].props.eventId &&
+                family?.Events?.includes(
+                  mainData[0]?.layers[childId].props.eventId
+                )
                 ? "breath"
                 : "hello"
-            }`}
+              }`}
           >
             <div
               style={{
@@ -849,27 +830,26 @@ function test({ id, FamilyId }) {
                 : `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
               cursor: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? "pointer"
                   : "not-allowed"
                 : "default",
               opacity: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? 1
                   : 0.3
                 : 1,
             }}
-            className={`${
-              mainData[0]?.layers[childId].props.eventId &&
-              family?.Events?.includes(
-                mainData[0]?.layers[childId].props.eventId
-              )
+            className={`${mainData[0]?.layers[childId].props.eventId &&
+                family?.Events?.includes(
+                  mainData[0]?.layers[childId].props.eventId
+                )
                 ? "breath"
                 : ""
-            }`}
+              }`}
           >
             <ImageContent
               image={data?.props.image}
@@ -903,27 +883,26 @@ function test({ id, FamilyId }) {
                 : `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
               cursor: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? "pointer"
                   : "not-allowed"
                 : "default",
               opacity: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? 1
                   : 0.3
                 : "",
             }}
-            className={`${
-              mainData[0]?.layers[childId].props.eventId &&
-              family?.Events?.includes(
-                mainData[0]?.layers[childId].props.eventId
-              )
+            className={`${mainData[0]?.layers[childId].props.eventId &&
+                family?.Events?.includes(
+                  mainData[0]?.layers[childId].props.eventId
+                )
                 ? "breath"
                 : ""
-            }`}
+              }`}
           >
             <div
               style={{
@@ -970,29 +949,28 @@ function test({ id, FamilyId }) {
                 : `translate(${data?.props.position.x}px,${data?.props.position.y}px)`,
               cursor: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? "pointer"
                   : "not-allowed"
                 : "default",
               opacity: mainData[0]?.layers[childId].props.eventId
                 ? family?.Events?.includes(
-                    mainData[0]?.layers[childId].props.eventId
-                  )
+                  mainData[0]?.layers[childId].props.eventId
+                )
                   ? 1
                   : 0.3
                 : data?.props?.transparency
-                ? data?.props?.transparency
-                : 1,
+                  ? data?.props?.transparency
+                  : 1,
             }}
-            className={`${
-              mainData[0]?.layers[childId].props.eventId &&
-              family?.Events?.includes(
-                mainData[0]?.layers[childId].props.eventId
-              )
+            className={`${mainData[0]?.layers[childId].props.eventId &&
+                family?.Events?.includes(
+                  mainData[0]?.layers[childId].props.eventId
+                )
                 ? "breath"
                 : ""
-            }`}
+              }`}
           >
             <div
               style={{
@@ -1325,18 +1303,17 @@ function test({ id, FamilyId }) {
               (windowWidth < 530 && router.pathname === "/InvitationCard"
                 ? windowWidth / data[0]?.layers.ROOT.props.boxSize.width
                 : (windowHeight -
-                    (router.pathname === "/InvitationCard" ? 100 : 320)) /
-                  data[0]?.layers.ROOT.props.boxSize.height) *
+                  (router.pathname === "/InvitationCard" ? 100 : 320)) /
+                data[0]?.layers.ROOT.props.boxSize.height) *
               data[0]?.layers.ROOT.props.boxSize.height
-            }px`,
-            width: `${
-              (windowWidth < 530 && router.pathname === "/InvitationCard"
+              }px`,
+            width: `${(windowWidth < 530 && router.pathname === "/InvitationCard"
                 ? windowWidth / data[0]?.layers.ROOT.props.boxSize.width
                 : (windowHeight -
-                    (router.pathname === "/InvitationCard" ? 100 : 320)) /
-                  data[0]?.layers.ROOT.props.boxSize.height) *
+                  (router.pathname === "/InvitationCard" ? 100 : 320)) /
+                data[0]?.layers.ROOT.props.boxSize.height) *
               data[0]?.layers.ROOT.props.boxSize.width
-            }px`,
+              }px`,
             background: gradient ? gradient : data[0]?.layers.ROOT.props.color,
             backgroundImage: `url(${data[0]?.layers?.ROOT?.props?.image?.url})`,
             backgroundRepeat: "no-repeat",
@@ -1358,9 +1335,9 @@ function test({ id, FamilyId }) {
                 windowWidth < 530 && router.pathname === "/InvitationCard"
                   ? windowWidth / data[0]?.layers.ROOT.props.boxSize.width
                   : (windowHeight -
-                      (router.pathname === "/InvitationCard" ? 100 : 320)) /
-                    data[0]?.layers.ROOT.props.boxSize.height
-              })`,
+                    (router.pathname === "/InvitationCard" ? 100 : 320)) /
+                  data[0]?.layers.ROOT.props.boxSize.height
+                })`,
               transformOrigin: "0 0",
               // boxShadow: '0 0 10px rgba(0,0,0,0.7)',
               // padding: '5px',
@@ -1382,14 +1359,12 @@ function test({ id, FamilyId }) {
                       }}
                       key={key}
                       style={{
-                        height: `${
-                          data[0]?.layers[childId].props.boxSize.height /
+                        height: `${data[0]?.layers[childId].props.boxSize.height /
                           data[0]?.layers[childId].props.scale
-                        }px`,
-                        width: `${
-                          data[0]?.layers[childId].props.boxSize.width /
+                          }px`,
+                        width: `${data[0]?.layers[childId].props.boxSize.width /
                           data[0]?.layers[childId].props.scale
-                        }px`,
+                          }px`,
                         position: "absolute",
                         transform: `translate(${data[0]?.layers[childId].props.position.x}px,${data[0]?.layers[childId].props.position.y}px) rotate(${data[0]?.layers[childId].props.rotate}deg) scale(${data[0]?.layers[childId].props.scale})`,
                         transformOrigin: "0 0",
@@ -1417,14 +1392,12 @@ function test({ id, FamilyId }) {
                     <div
                       key={key}
                       style={{
-                        height: `${
-                          data[0]?.layers[childId].props.boxSize.height /
+                        height: `${data[0]?.layers[childId].props.boxSize.height /
                           data[0]?.layers[childId].props.scale
-                        }px`,
-                        width: `${
-                          data[0]?.layers[childId].props.boxSize.width /
+                          }px`,
+                        width: `${data[0]?.layers[childId].props.boxSize.width /
                           data[0]?.layers[childId].props.scale
-                        }px`,
+                          }px`,
                         position: "absolute",
                         transform: `translate(${data[0]?.layers[childId].props.position.x}px,${data[0]?.layers[childId].props.position.y}px) rotate(${data[0]?.layers[childId].props.rotate}deg) scale(${data[0]?.layers[childId].props.scale})`,
                         transformOrigin: "0 0",

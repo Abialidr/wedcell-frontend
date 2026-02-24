@@ -15,7 +15,7 @@ import {
   useCreateOtpMutation,
   useLoginMutation,
 } from "redux/Api/signInAndLogin.api";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import { S3PROXY } from "../../config";
 const LoginForm = ({ setChangeState }) => {
   const dispatch = useDispatch();
@@ -128,7 +128,7 @@ const LoginForm = ({ setChangeState }) => {
     }
   };
   const [value, setValue] = useState("");
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     setValue(newValue);
     setcurrState(0);
     setEmailPhone(newValue.replace(/[^\d]/g, ""));
@@ -155,26 +155,26 @@ const LoginForm = ({ setChangeState }) => {
             <div className={styles.Mainform}>
               <article>
                 {currState === 0 ? (
-                  <MuiPhoneNumber
+                  <MuiTelInput
                     value={value}
                     id="outlined-basic"
                     label="Mobile No"
                     variant="outlined"
                     fullWidth
-                    defaultCountry={"in"}
+                    defaultCountry={"IN"}
                     onChange={handleChange}
                     onlyCountries={[
-                      "ae",
-                      "in",
-                      "th",
-                      "lk",
-                      "id",
-                      "ca",
-                      "mv",
-                      "vn",
-                      "kh",
-                      "ph",
-                      "my",
+                      "AE",
+                      "IN",
+                      "TH",
+                      "LK",
+                      "ID",
+                      "CA",
+                      "MV",
+                      "VN",
+                      "KH",
+                      "PH",
+                      "MY",
                     ]}
                   />
                 ) : (
@@ -220,10 +220,10 @@ const LoginForm = ({ setChangeState }) => {
                 {currState === 0
                   ? ""
                   : isTimerRunning
-                  ? `Resend in ${timer} seconds`
-                  : otpSent
-                  ? "Otp Resend Successfully"
-                  : "Resend Otp"}
+                    ? `Resend in ${timer} seconds`
+                    : otpSent
+                      ? "Otp Resend Successfully"
+                      : "Resend Otp"}
               </button>
             </div>
             <button

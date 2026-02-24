@@ -38,7 +38,7 @@ import {
   useVerifyOtpMutation,
   useVerifyStudentMutation,
 } from "redux/Api/signInAndLogin.api";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 import parsePhoneNumberFromString from "libphonenumber-js";
 import compressAndAppendFiles from "Components/compressAndAppendFiles";
 
@@ -479,7 +479,7 @@ const ProfileScreenTemplate = () => {
       theme: "light",
     });
 
-  const VerifyEmailOTP = async () => {};
+  const VerifyEmailOTP = async () => { };
 
   const handleChangeCover = ({ fileList: newFileList, file }) => {
     if (file.status !== "removed") {
@@ -510,10 +510,10 @@ const ProfileScreenTemplate = () => {
     }
   };
   const [isValid, setIsValid] = useState(true);
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     const parsedPhoneNumber = parsePhoneNumberFromString(
       newValue,
-      country.Name
+      info.countryCode
     );
     const isValidPhoneNumber = parsedPhoneNumber
       ? parsedPhoneNumber.isValid()
@@ -653,7 +653,7 @@ const ProfileScreenTemplate = () => {
                   Verified
                 </Typography>
               ) : (
-                <Box onClick={() => {}}>
+                <Box onClick={() => { }}>
                   <Typography
                     sx={{
                       color: Colors.primary,
@@ -665,26 +665,26 @@ const ProfileScreenTemplate = () => {
                   </Typography>
                 </Box>
               )}
-              <MuiPhoneNumber
+              <MuiTelInput
                 value={value}
                 id="outlined-basic"
                 label="Mobile No"
                 variant="outlined"
                 fullWidth
-                defaultCountry={"in"}
+                defaultCountry={"IN"}
                 onChange={handleChange}
                 onlyCountries={[
-                  "ae",
-                  "in",
-                  "th",
-                  "lk",
-                  "id",
-                  "ca",
-                  "mv",
-                  "vn",
-                  "kh",
-                  "ph",
-                  "my",
+                  "AE",
+                  "IN",
+                  "TH",
+                  "LK",
+                  "ID",
+                  "CA",
+                  "MV",
+                  "VN",
+                  "KH",
+                  "PH",
+                  "MY",
                 ]}
               />
               {/* <TextField

@@ -24,7 +24,7 @@ import {
   useStudentLoginMutation,
 } from "redux/Api/signInAndLogin.api";
 import parsePhoneNumberFromString from "libphonenumber-js";
-import MuiPhoneNumber from "material-ui-phone-number";
+import { MuiTelInput } from "mui-tel-input";
 
 const login = ({ role }) => {
   const dispatch = useDispatch();
@@ -138,10 +138,10 @@ const login = ({ role }) => {
   const [isValid, setIsValid] = useState(false);
   const [value, setValue] = useState("");
 
-  const handleChange = (newValue, country) => {
+  const handleChange = (newValue, info) => {
     const parsedPhoneNumber = parsePhoneNumberFromString(
       newValue,
-      country.Name
+      info.countryCode
     );
     const isValidPhoneNumber = parsedPhoneNumber
       ? parsedPhoneNumber.isValid()
@@ -207,26 +207,26 @@ const login = ({ role }) => {
               <label className="form-label text-gray">
                 Join wedfield to get your vendor for your wedding
               </label>
-              <MuiPhoneNumber
+              <MuiTelInput
                 value={value}
                 id="outlined-basic"
                 label="Mobile No"
                 variant="outlined"
                 fullWidth
-                defaultCountry={"in"}
+                defaultCountry={"IN"}
                 onChange={handleChange}
                 onlyCountries={[
-                  "ae",
-                  "in",
-                  "th",
-                  "lk",
-                  "id",
-                  "ca",
-                  "mv",
-                  "vn",
-                  "kh",
-                  "ph",
-                  "my",
+                  "AE",
+                  "IN",
+                  "TH",
+                  "LK",
+                  "ID",
+                  "CA",
+                  "MV",
+                  "VN",
+                  "KH",
+                  "PH",
+                  "MY",
                 ]}
               />
               {/* <input
@@ -297,26 +297,26 @@ const login = ({ role }) => {
               <label className="form-label text-gray">
                 Join wedfield to get your vendor for your wedding
               </label>
-              <MuiPhoneNumber
+              <MuiTelInput
                 value={value}
                 id="outlined-basic"
                 label="Mobile No"
                 variant="outlined"
                 fullWidth
-                defaultCountry={"in"}
+                defaultCountry={"IN"}
                 onChange={handleChange}
                 onlyCountries={[
-                  "ae",
-                  "in",
-                  "th",
-                  "lk",
-                  "id",
-                  "ca",
-                  "mv",
-                  "vn",
-                  "kh",
-                  "ph",
-                  "my",
+                  "AE",
+                  "IN",
+                  "TH",
+                  "LK",
+                  "ID",
+                  "CA",
+                  "MV",
+                  "VN",
+                  "KH",
+                  "PH",
+                  "MY",
                 ]}
               />
             </div>
