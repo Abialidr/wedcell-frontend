@@ -4,7 +4,7 @@
 }
 .mainDiv {
   display: flex;
-  font-family: 'Ledger';
+  font-family: "Ledger";
   width: 100%;
   /* align-items: center; */
 }
@@ -52,7 +52,7 @@
 }
 .WelcomeBackspan {
   font-size: 25px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
@@ -70,7 +70,7 @@
 }
 .checkBoxdiv {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   font-size: 14px;
   gap: 10px;
   margin-bottom: 20px;
@@ -86,7 +86,7 @@
   border: none;
   border-radius: 50px;
   margin-bottom: 15px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
 }
 .Ordiv {

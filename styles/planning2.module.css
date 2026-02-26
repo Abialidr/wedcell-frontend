@@ -153,16 +153,16 @@
 }
 .mainName .Name {
   font-size: 35px;
-  font-family: 'Ledger';
+  font-family: "Ledger";
 }
 .mainName .weddingdate {
   font-size: 18px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 .editBtn {
   padding: 2px 30px;
   height: fit-content;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background: none;
   border: 2px solid #db3672;
   font-size: 19px;
@@ -178,7 +178,7 @@
   align-items: center;
   gap: 5px;
   font-size: 19px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 .servicesnumb {
   font-weight: 600;
@@ -195,7 +195,7 @@
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 23px;
   margin-bottom: 40px;
 }
@@ -263,7 +263,7 @@
 }
 .VendorManagerspan {
   font-size: 30px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 500;
 }
 .vendorBokkedSpan {
@@ -427,7 +427,7 @@
   }
   .changePhoto {
     font-size: 16px;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     padding: 11px 20px;
     border-radius: 18px;
     background-color: #82818161;
@@ -460,14 +460,14 @@
     font-size: 23px;
     font-weight: 600;
     color: white;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     letter-spacing: 2px;
   }
   .maindate {
     font-size: 18px;
     font-weight: 600;
     color: white;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     letter-spacing: 2px;
   }
   .uploadPhoto {
@@ -477,7 +477,7 @@
     transform: translateX(-50%);
     color: white;
     font-size: 18px;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     font-weight: 600;
     border: 2px solid white;
     border-radius: 5px;
@@ -506,7 +506,7 @@
   }
   .statusdiv span {
     font-size: 18px;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     padding-bottom: 10px;
   }
   .statusdiv {
@@ -531,7 +531,7 @@
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 13px;
-    font-family: 'Ledger';
+    font-family: "Ledger";
   }
   .allservicesNumber {
     font-size: 17px;
@@ -577,7 +577,7 @@
     font-size: 18px;
     color: white;
     border-radius: 14px;
-    font-family: 'Ledger';
+    font-family: "Ledger";
   }
   .Allthemeroyal {
     background-color: #fb8949;
@@ -594,7 +594,7 @@
   .quickInvitesdiv {
     display: flex;
     gap: 13px;
-    align-items: end;
+    align-items: flex-end;
     margin-top: 10px;
     cursor: pointer;
   }
@@ -605,7 +605,7 @@
   .quickInvitesdiv span {
     font-size: 15px;
     color: #868686;
-    font-family: 'Ledger';
+    font-family: "Ledger";
     text-decoration: underline;
   }
   .CardDiv {
@@ -623,7 +623,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-family: 'Ledger';
+  font-family: "Ledger";
 }
 .mysideImage {
   display: flex;
@@ -642,7 +642,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 0px 10px;
-  align-items: end;
+  align-items: flex-end;
 }
 .Nameinput {
   display: flex;
@@ -731,7 +731,7 @@
 .VendorManagerDiv {
   display: flex;
   flex-direction: column;
-  font-family: 'Ledger';
+  font-family: "Ledger";
 }
 .VendorManagerhead {
   display: flex;
@@ -1074,7 +1074,7 @@
 @media (max-width: 880px) {
   .checkListhead {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     gap: 20px;
   }
@@ -1565,7 +1565,7 @@
   width: 22%;
   text-align: right;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: end;
 }
 .budPlanTableHeadValues1 {
@@ -1885,11 +1885,11 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  font-family: 'Ledger';
+  font-family: "Ledger";
 }
 .indexPageGuestlisdivSpan {
   font-size: 30px;
-  font-family: 'Monteserat';
+  font-family: "Monteserat";
   margin-bottom: 30px;
 }
 .graphDivindex {
@@ -1908,7 +1908,7 @@
   font-size: 18px;
   font-weight: 600;
   color: #db3672;
-  font-family: 'Ledger';
+  font-family: "Ledger";
   cursor: pointer;
 }
 .indexBudgetPlannerDiv {
@@ -1983,7 +1983,7 @@
 }
 .invitesname1 {
   font-size: 55px;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-weight: 400;
 }
 .nameanddate1 {
@@ -2012,7 +2012,7 @@
 }
 .storyFirstDivhead {
   font-size: 55px;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-weight: 400;
 }
 .storyFirstDivbody {
@@ -2035,7 +2035,7 @@
 }
 .storySecDivhead {
   font-size: 55px;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-weight: 400;
 }
 .storySecDivbody {
@@ -2060,7 +2060,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  background-image: url('/images/webp/image 648.webp');
+  background-image: url("/images/webp/image 648.webp");
   padding: 40px 0px;
 }
 .inviteListCarddiv {
@@ -2089,7 +2089,7 @@
   border-radius: 50px;
 }
 .inviteListcardtitle {
-  font-family: 'Ledger';
+  font-family: "Ledger";
   font-size: 23px;
 }
 .invitecardDate {
@@ -2121,7 +2121,7 @@
 }
 .willyouAttendimgspan {
   font-size: 35px;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   font-weight: 400;
 }
 .willyouAttendimgspanname {

@@ -327,7 +327,7 @@
 .leftsec article {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .fulldetails1 {
@@ -358,7 +358,7 @@
 .leftsec1 article {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .cats {
@@ -1027,7 +1027,7 @@
 .leftsec1 article {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .rightsec article {
@@ -1037,7 +1037,7 @@
 .leftsec article {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .cats {
@@ -1333,7 +1333,7 @@
   font-size: 15px;
   color: #b6255a;
   font-weight: 600;
-  align-items: end;
+  align-items: flex-end;
   border: 1px solid #b6255a;
   border-radius: 10px;
 }

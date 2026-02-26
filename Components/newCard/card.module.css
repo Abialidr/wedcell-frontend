@@ -136,7 +136,7 @@
 .review-det {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 .mainfeat-container {
   display: flex;

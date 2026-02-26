@@ -656,7 +656,7 @@
   .quickInvitesdiv {
     display: flex;
     gap: 13px;
-    align-items: end;
+    align-items: flex-end;
     margin-top: 10px;
     cursor: pointer;
   }
@@ -704,7 +704,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 0px 10px;
-  align-items: end;
+  align-items: flex-end;
 }
 .Nameinput {
   display: flex;
@@ -1252,7 +1252,7 @@
 @media (max-width: 880px) {
   .checkListhead {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     gap: 20px;
   }
@@ -1790,7 +1790,7 @@
   width: 22%;
   text-align: right;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: end;
 }
 .budPlanTableHeadValues1 {
@@ -2628,7 +2628,7 @@
   display: flex;
   flex-direction: column;
   width: 65%;
-  align-items: end;
+  align-items: flex-end;
 }
 .yourmessagenametime {
   display: flex;
@@ -2657,7 +2657,7 @@
 .yourmessagetime {
   display: flex;
   font-size: 14px;
-  align-items: end;
+  align-items: flex-end;
   color: #808080;
   font-weight: 400;
 }
@@ -2698,7 +2698,7 @@
   display: flex;
   flex-direction: column;
   width: 65%;
-  align-items: start;
+  align-items: flex-start;
   justify-content: end;
 }
 .mymessagenametime {
@@ -2731,7 +2731,7 @@
 .mymessagetime {
   display: flex;
   font-size: 14px;
-  align-items: end;
+  align-items: flex-end;
   color: #808080;
   font-weight: 400;
 }
@@ -2739,7 +2739,7 @@
   width: 89%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 }
 .myMessagebody {
   display: flex;
@@ -4202,7 +4202,7 @@
           }
         }
         .BudgetPlannerpayemntBoxRight {
-          align-items: end;
+          align-items: flex-end;
           justify-content: end;
           img {
             width: 30px;
@@ -4345,7 +4345,7 @@
               text-align: left;
               color: #7d7d7d;
               justify-content: start;
-              align-items: start;
+              align-items: flex-start;
               text-wrap: wrap;
             }
           }
@@ -4532,7 +4532,7 @@
 
         .listdiv1 {
           border: none;
-          align-items: start;
+          align-items: flex-start;
           border-radius: 0px;
           border-bottom: 1px solid lightgray;
           .todoBtn {
@@ -4907,7 +4907,7 @@
       margin-bottom: 8px;
       @media (max-width: 450px) {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         > img {
           display: none;
         }

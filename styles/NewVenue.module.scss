@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .mainWrapper {
   width: 100%;
@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 20px;
   border-radius: 7px;
   overflow: hidden;
@@ -18,7 +18,7 @@
 .bgWrapper {
   width: 100%;
   height: 100%;
-  background: url('/assests/service.png');
+  background: url("/assests/service.png");
   background-position: 0px -400px;
   background-size: contain;
   background-size: 100%;
@@ -52,7 +52,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   @media (max-width: 900px) {
     font-size: 27px;
   }
@@ -98,7 +98,7 @@
   border-radius: 100%;
   margin: 5px;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .services {
@@ -204,7 +204,7 @@
 
 .points > div p {
   /* text-align: start ; */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .plansWrapper {
@@ -260,7 +260,7 @@
         }
         max-width: 550px;
         display: flex;
-        align-items: start;
+        align-items: flex-start;
         gap: 3px;
         font-family: Poppins;
         font-size: 17px;
@@ -347,7 +347,7 @@
 }
 
 .infoRight h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .inputWrapper {
@@ -368,8 +368,8 @@
   box-sizing: border-box;
   margin: 1rem 0;
 }
-.inputWrapper input[type='date'],
-.inputWrapper input[type='time'] {
+.inputWrapper input[type="date"],
+.inputWrapper input[type="time"] {
   border: none;
   box-sizing: border-box;
   outline: 0;
@@ -387,16 +387,16 @@
   margin: 1rem 0;
 }
 
-.inputWrapper input[type='date']::placeholder,
-.inputWrapper input[type='time']::placeholder {
-  font-family: 'Roboto';
+.inputWrapper input[type="date"]::placeholder,
+.inputWrapper input[type="time"]::placeholder {
+  font-family: "Roboto";
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
 }
 
-.inputWrapper input[type='date']::-webkit-calendar-picker-indicator,
-.inputWrapper input[type='time']::-webkit-calendar-picker-indicator {
+.inputWrapper input[type="date"]::-webkit-calendar-picker-indicator,
+.inputWrapper input[type="time"]::-webkit-calendar-picker-indicator {
   background: none;
   bottom: 0;
   color: transparent;
@@ -409,8 +409,8 @@
   width: auto;
 }
 
-.inputWrapper input[type='date']::-webkit-datetime-edit,
-.inputWrapper input[type='time']::-webkit-datetime-edit {
+.inputWrapper input[type="date"]::-webkit-datetime-edit,
+.inputWrapper input[type="time"]::-webkit-datetime-edit {
   padding-left: 20px;
   width: 100%;
 }
@@ -487,7 +487,7 @@
   border: none;
   background: #ff3434;
   border-radius: 12px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

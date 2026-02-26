@@ -223,7 +223,7 @@
 .review-det {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 5px;
 }
@@ -231,7 +231,7 @@
   display: flex;
   justify-content: end;
   text-align: right;
-  align-items: start;
+  align-items: flex-start;
 }
 .review img {
   height: 15px;
@@ -255,7 +255,7 @@
 }
 .mainfeat {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   white-space: nowrap;
   color: #909090;
   font-size: 13px;

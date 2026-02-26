@@ -248,7 +248,7 @@
 .leftsec article {
   display: flex;
   width: 100%;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .cats {
@@ -282,7 +282,6 @@
 .imgListCardforAlbum > span:first-child {
   height: 150px !important;
   width: 200px !important;
-
 }
 .imgListCardforAlbum img {
   height: 100%;
