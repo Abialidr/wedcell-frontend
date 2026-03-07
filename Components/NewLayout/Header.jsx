@@ -32,7 +32,7 @@ import { makeStyles } from "@mui/styles";
 import { S3PROXY } from "../../config";
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1),
+    margin: theme?.spacing ? theme.spacing(1) : "8px",
   },
   customWidth: {
     maxWidth: "1000px",
@@ -151,7 +151,7 @@ const DashBoardModal = (props) => {
               onClick={(e) => {
                 e.stopPropagation();
                 router.push(
-                  globleuser ? "/user-dashboard/profile" : "/customer-login"
+                  globleuser ? "/user-dashboard/profile" : "/customer-login",
                 );
               }}
             >
@@ -177,7 +177,7 @@ const DashBoardModal = (props) => {
               onClick={(e) => {
                 e.stopPropagation();
                 router.push(
-                  globleuser ? "/user-dashboard/wishlist" : "/customer-login"
+                  globleuser ? "/user-dashboard/wishlist" : "/customer-login",
                 );
               }}
             >
@@ -203,7 +203,7 @@ const DashBoardModal = (props) => {
               onClick={(e) => {
                 e.stopPropagation();
                 router.push(
-                  globleuser ? "/user-dashboard/cart" : "/customer-login"
+                  globleuser ? "/user-dashboard/cart" : "/customer-login",
                 );
               }}
             >
@@ -229,7 +229,7 @@ const DashBoardModal = (props) => {
               onClick={(e) => {
                 e.stopPropagation();
                 router.push(
-                  globleuser ? "/user-dashboard/Message" : "/customer-login"
+                  globleuser ? "/user-dashboard/Message" : "/customer-login",
                 );
               }}
             >
@@ -269,6 +269,7 @@ const DashBoardModal = (props) => {
 };
 
 const Header = () => {
+  const router = useRouter();
   const classes = useStyles();
 
   const globleuser = useSelector(selectUser);
@@ -403,7 +404,7 @@ const Header = () => {
       let newPath = segments.join("/");
       console.log(
         "🚀 ~ file: Header.jsx:398 ~ handleLocation ~ newPath:",
-        newPath
+        newPath,
       );
       router.push(newPath);
     }
@@ -461,7 +462,6 @@ const Header = () => {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-  const router = useRouter();
 
   const menuId = "primary-search-account-menu";
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -540,11 +540,13 @@ const Header = () => {
             </div>
             <div className={styles.topHead}>
               <div className={styles.inner}>
-                <img
-                  onClick={() => router.push("/")}
-                  src={`${S3PROXY}/public/Layout/logo.svg`}
-                  alt=""
-                />
+                <Link href="/">
+                  <img
+                    src={`${S3PROXY}/public/Layout/logo.svg`}
+                    alt=""
+                    style={{ cursor: "pointer" }}
+                  />
+                </Link>
                 <SearchBar
                   searchData={searchData}
                   button={
@@ -735,7 +737,7 @@ const Header = () => {
                                 router.push(
                                   globleuser
                                     ? "/user-dashboard"
-                                    : "/customer-login"
+                                    : "/customer-login",
                                 );
                               }}
                             >
@@ -771,7 +773,7 @@ const Header = () => {
                                 router.push(
                                   globleuser
                                     ? "/user-dashboard/profile"
-                                    : "/customer-login"
+                                    : "/customer-login",
                                 );
                               }}
                             >
@@ -800,7 +802,7 @@ const Header = () => {
                                 router.push(
                                   globleuser
                                     ? "/user-dashboard/wishlist"
-                                    : "/customer-login"
+                                    : "/customer-login",
                                 );
                               }}
                             >
@@ -829,7 +831,7 @@ const Header = () => {
                                 router.push(
                                   globleuser
                                     ? "/user-dashboard/cart"
-                                    : "/customer-login"
+                                    : "/customer-login",
                                 );
                               }}
                             >
@@ -913,7 +915,7 @@ const Header = () => {
                                 router.push(
                                   globleuser
                                     ? "/user-dashboard/Message"
-                                    : "/customer-login"
+                                    : "/customer-login",
                                 );
                               }}
                             >
@@ -989,13 +991,9 @@ const Header = () => {
                     </Link>
                   ) : (
                     <span>
-                      <button
-                        onClick={() => {
-                          router.push("/customer-login");
-                        }}
-                      >
-                        Register / Login
-                      </button>
+                      <Link href="/customer-login">
+                        <button>Register / Login</button>
+                      </Link>
                     </span>
                   )}
                 </div>
@@ -1139,30 +1137,34 @@ const Header = () => {
                     </article>
                   </Tooltip>
                   <span>
-                    <img
-                      onClick={() => {
-                        if (globleuser) {
-                          router.push("/user-dashboard/Message");
-                        } else {
-                          router.push("/customer-login");
-                        }
-                      }}
-                      src={`${S3PROXY}/public/Layout/bth1.png`}
-                      alt=""
-                    />
+                    <Link
+                      href={
+                        globleuser
+                          ? "/user-dashboard/Message"
+                          : "/customer-login"
+                      }
+                    >
+                      <img
+                        src={`${S3PROXY}/public/Layout/bth1.png`}
+                        alt=""
+                        style={{ cursor: "pointer" }}
+                      />
+                    </Link>
                   </span>
                   <span>
-                    <img
-                      onClick={() => {
-                        if (globleuser) {
-                          router.push("/user-dashboard/wishlist");
-                        } else {
-                          router.push("/customer-login");
-                        }
-                      }}
-                      src={`${S3PROXY}/public/Layout/bth3.png`}
-                      alt=""
-                    />
+                    <Link
+                      href={
+                        globleuser
+                          ? "/user-dashboard/wishlist"
+                          : "/customer-login"
+                      }
+                    >
+                      <img
+                        src={`${S3PROXY}/public/Layout/bth3.png`}
+                        alt=""
+                        style={{ cursor: "pointer" }}
+                      />
+                    </Link>
                   </span>
                   {/* <span>
                     <img
@@ -1251,11 +1253,13 @@ const Header = () => {
                   src={`${S3PROXY}/public/Layout/menu 1.png`}
                   alt=""
                 />
-                <img
-                  onClick={() => router.push("/")}
-                  src={`${S3PROXY}/public/Layout/logo copy.svg`}
-                  alt=""
-                />
+                <Link href="/">
+                  <img
+                    src={`${S3PROXY}/public/Layout/logo copy.svg`}
+                    alt=""
+                    style={{ cursor: "pointer" }}
+                  />
+                </Link>
               </article>
               <section>
                 <article
@@ -1287,9 +1291,11 @@ const Header = () => {
                     {globleuser?.data?.name?.substring(0, 1)}
                   </span>
                 ) : (
-                  <hgroup onClick={() => router.push("/customer-login")}>
-                    <Icon icon={"ri:login-circle-line"}></Icon>
-                  </hgroup>
+                  <Link href="/customer-login">
+                    <hgroup style={{ cursor: "pointer" }}>
+                      <Icon icon={"ri:login-circle-line"}></Icon>
+                    </hgroup>
+                  </Link>
                 )}
               </section>
             </div>
